@@ -91,7 +91,7 @@ func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string)
 	s := []string{value}
 	s1 := strings.Join(s, " Amol Ghanekar")
 	
-	err = stub.PutState(key, []byte(s)) //write the variable into the chaincode state
+	err = stub.PutState(key, []byte(s1)) //write the variable into the chaincode state
 	if err != nil {
 		return nil, err
 	}
