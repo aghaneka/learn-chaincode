@@ -4,6 +4,6 @@ import (
 	"strings"
 )
 
-func getName() String {
+func getName() {
     return "Tavis bones"
 }
