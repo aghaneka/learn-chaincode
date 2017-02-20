@@ -14,7 +14,7 @@ func check(e error) {
 
 func getName() (string){
 	pwd, _ := os.Getwd()
-	fmt.Printf(pwf)
+	fmt.Printf("dir : "+pwd)
 	dat, err := ioutil.ReadFile(pwd+"/writer.dat")
     check(err)
     return string(dat)
