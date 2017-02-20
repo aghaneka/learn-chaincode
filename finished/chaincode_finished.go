@@ -21,8 +21,7 @@ import (
 	"fmt"
 	"strings"
 	"github.com/hyperledger/fabric/core/chaincode/shim"
-	"finished"
-)
+	)
 
 // SimpleChaincode example simple Chaincode implementation
 type SimpleChaincode struct {
