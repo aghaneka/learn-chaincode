@@ -13,7 +13,7 @@ func check(e error) {
 
 func getName() (string){
 	pwd, _ := os.Getwd()
-	dat, err := ioutil.ReadFile(pwd+"writer.dat")
+	dat, err := ioutil.ReadFile(pwd+"/writer.dat")
     check(err)
     return string(dat)
 }
