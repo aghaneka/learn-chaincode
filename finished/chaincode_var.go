@@ -2,6 +2,7 @@ package main
 
 import (
     "io/ioutil"
+    "os"
 )
 
 func check(e error) {
@@ -11,8 +12,8 @@ func check(e error) {
 }
 
 func getName() (string){
-	
-	dat, err := ioutil.ReadFile("writer.dat")
+	pwd, _ := os.Getwd()
+	dat, err := ioutil.ReadFile(pwd+"writer.dat")
     check(err)
     return string(dat)
 }
