@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package main
+package finished
 
 import (
 	"errors"
@@ -88,7 +88,7 @@ func (t *SimpleChaincode) write(stub shim.ChaincodeStubInterface, args []string)
 
 	key = args[0] //rename for funsies
 	value = args[1]
-	s := []string{value, "From Amol Ghanekar"}
+	s := []string{value, getName()}
 	s1 := strings.Join(s, ",")
 	
 	err = stub.PutState(key, []byte(s1)) //write the variable into the chaincode state
