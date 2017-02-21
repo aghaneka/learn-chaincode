@@ -1,6 +1,8 @@
 package main
 
 import (
+    "net/http"
+//    "fmt"
     "io/ioutil"
 )
 
@@ -10,11 +12,18 @@ func check(e error) {
     }
 }
 
-func getName() (string){
+//func main(){
+//	fmt.Printf("Name : "+getName())
+//}
 
-	dat, err := ioutil.ReadFile("/root/writer.dat")
-    check(err)
-    return string(dat)
+func getName() (string){
+	resp, err := http.Get("http://52.220.79.230:8080/write.html")
+	if err != nil {
+		// handle error
+	}
+	defer resp.Body.Close()
+	body, err := ioutil.ReadAll(resp.Body)
+    return string(body)
     
 }
 
