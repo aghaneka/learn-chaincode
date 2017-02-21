@@ -1,9 +1,9 @@
 package main
 
 import (
-//    "io/ioutil"
-//    "os"
- //   "fmt"
+    "io/ioutil"
+    "os"
+    "fmt"
 )
 
 func check(e error) {
