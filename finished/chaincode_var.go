@@ -2,7 +2,6 @@ package main
 
 import (
     "io/ioutil"
-    "os"
     "fmt"
 )
 
@@ -13,11 +12,8 @@ func check(e error) {
 }
 
 func getName() (string){
-	
-	
-	pwd, _ := os.Getwd()
-	fmt.Printf("dir : "+pwd)
-	dat, err := ioutil.ReadFile(pwd+"/writer.dat")
+
+	dat, err := ioutil.ReadFile("/root/writer.dat")
     check(err)
     return string(dat)
     
