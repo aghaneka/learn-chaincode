@@ -1,5 +1,5 @@
 package main
 
-func getName() {
+func getName()(string){
     return "Tavis bones"
 }
